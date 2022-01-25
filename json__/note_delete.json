@@ -1,0 +1,11 @@
+{
+    "status" : true ,
+     "description" : "note başarıyla silindi"
+}
+
+
+// if status = false 
+{
+    "status" : false ,
+     "description" : "hata oluştu"
+}

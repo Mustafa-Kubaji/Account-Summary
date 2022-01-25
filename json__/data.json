@@ -1,0 +1,183 @@
+{
+  "chartData": {
+    "status": true,
+    "data": [
+      {
+        "label": "TL Toplam Borç",
+        "value": 14360235.7664,
+        "parabirim": "TL"
+      },
+      {
+        "label": "TL Toplam Alacak",
+        "value": 18348848,
+        "parabirim": "TL"
+      }
+    ],
+    "list": [
+      {
+        "id": 0,
+        "label": "Toplam Borç",
+        "value": 14348848,
+        "paraBirim": "TL"
+      },
+      {
+        "id": 0,
+        "label": "Toplam Alacak",
+        "value": 14348848,
+        "paraBirim": "TL"
+      },
+      {
+        "id": 1,
+        "label": "Toplam Borç",
+        "value": 1312,
+        "paraBirim": "USD"
+      },
+      {
+        "id": 1,
+        "label": "Toplam Alacak",
+        "value": 0,
+        "paraBirim": "USD"
+      }
+    ],
+    "sum": 11387.77,
+    "paraBirim": "TL",
+    "description": "Therer is a mistake"
+  },
+  "islemGecmisi": {
+    "status": true,
+    "model": {
+      "data": [
+        {
+          "id": 349,
+          "title": " <b>{1312,00 USD}</b> tutarında Odeme işlemi <b>{Şirket Kasası}</b> kasasından gerçekleştirildi.",
+          "module": 8,
+          "day": null,
+          "date": "2021-07-05T10:56:50.1645492",
+          "userId": 17,
+          "userName": "hakim@test.com",
+          "modules": []
+        },
+        {
+          "id": 347,
+          "title": " <b>{14344614,00 TL}</b> tutarında Odeme işlemi <b>{Şirket Kasası}</b> kasasından gerçekleştirildi.",
+          "module": 8,
+          "day": null,
+          "date": "2021-07-05T10:55:16.8495379",
+          "userId": 17,
+          "userName": "hakim@test.com",
+          "modules": []
+        },
+        {
+          "id": 345,
+          "title": " <b>{124124,00 TL}</b> tutarında Tahsilat işlemi <b>{Şirket Kasası}</b> kasasından gerçekleştirildi.",
+          "module": 8,
+          "day": null,
+          "date": "2021-07-05T10:49:44.7413115",
+          "userId": 17,
+          "userName": "hakim@test.com",
+          "modules": []
+        },
+        {
+          "id": 343,
+          "title": " <b>{12312,00 TL}</b> tutarında Tahsilat işlemi <b>{Şirket Kasası}</b> kasasından gerçekleştirildi.",
+          "module": 8,
+          "day": null,
+          "date": "2021-07-05T10:49:31.4698708",
+          "userId": 17,
+          "userName": "hakim@test.com",
+          "modules": []
+        },
+        {
+          "id": 341,
+          "title": " <b>{14212412,00 TL}</b> tutarında Tahsilat işlemi <b>{Şirket Kasası}</b> kasasından gerçekleştirildi.",
+          "module": 8,
+          "day": null,
+          "date": "2021-07-05T10:47:34.9565391",
+          "userId": 17,
+          "userName": "hakim@test.com",
+          "modules": []
+        },
+        {
+          "id": 3566641,
+          "title": " <b>{555555,00 TL}</b> tutarında Tahsilat işlemi <b>{Şirket Kasası}</b> kasasından gerçekleştirildi.",
+          "module": 8,
+          "day": null,
+          "date": "2021-07-05T10:47:34.9565391",
+          "userId": 17,
+          "userName": "hakim@test.com",
+          "modules": []
+        },
+        {
+          "id": 32344,
+          "title": " <b>{000000,00 TL}</b> tutarında Tahsilat işlemi <b>{Şirket Kasası}</b> kasasından gerçekleştirildi.",
+          "module": 8,
+          "day": null,
+          "date": "2021-07-05T10:47:34.9565391",
+          "userId": 17,
+          "userName": "hakim@test.com",
+          "modules": []
+        }
+      ],
+      "skip": 0,
+      "take": 5,
+      "pagesize": 5,
+      "total": 7,
+      "modulId": null,
+      "id": null
+    }
+  },
+  "notlar": {
+    "status": true,
+    "data": {
+      "data": [
+        {
+          "id": 1,
+          "text": "note 1",
+          "date": "20.08.2021"
+        },
+        {
+          "id": 2,
+          "text": "note 2",
+          "date": "02.10.2021"
+        },
+        {
+          "id": 1,
+          "text": "note 1",
+          "date": "20.08.2021"
+        }
+      ],
+      "note": null,
+      "skip": 0,
+      "take": 5,
+      "pagesize": 5,
+      "total": 0,
+      "module": 0,
+      "id": null
+    },
+    "description": "Therer is a mistake"
+  },
+  "tahsilatlar": {
+    "odeme": "EFT",
+    "kasa": "sirket_kasasi",
+    "tutar": "213",
+    "tutar_tur": "TL",
+    "tarih": "2021-09-23T14:48",
+    "belge_no": "2131243432",
+    "aciklama": "sadddddddddddddddddddddddddddddddddddd",
+    "banka": "Ziraat",
+    "cek_no": "",
+    "vade": ""
+  },
+  "odemeler": {
+    "odeme": "EFT",
+    "kasa": "sirket_kasasi",
+    "tutar": "32",
+    "tutar_tur": "TL",
+    "tarih": "2021-09-23T10:32",
+    "belge_no": "2333",
+    "aciklama": "saddsadsadsadsa",
+    "banka": "Ziraat",
+    "cek_no": "",
+    "vade": ""
+  }
+}

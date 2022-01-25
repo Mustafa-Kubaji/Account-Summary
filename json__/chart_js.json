@@ -1,0 +1,49 @@
+
+
+{
+    "chartData": {
+        
+    "status": true,
+    "data": [
+        {
+            "label": "TL Toplam Bor\u00E7",
+            "value": 14360235.7664,
+            "parabirim": "TL"
+        },
+        {
+            "label": "TL Toplam Alacak",
+            "value": 14348848,
+            "parabirim": "TL"
+        }
+    ],
+    "list": [
+        {
+            "id": 0,
+            "label": "Toplam Bor\u00E7",
+            "value": 14348848.00,
+            "paraBirim": "TL"
+        },
+        {
+            "id": 0,
+            "label": "Toplam Alacak",
+            "value": 14348848.00,
+            "paraBirim": "TL"
+        },
+        {
+            "id": 1,
+            "label": "Toplam Bor\u00E7",
+            "value": 1312.00,
+            "paraBirim": "USD"
+        },
+        {
+            "id": 1,
+            "label": "Toplam Alacak",
+            "value": 0.00,
+            "paraBirim": "USD"
+        }
+    ],
+    "sum": 11387.77,
+    "paraBirim": "TL",
+    "description":"Therer is a mistake"
+}
+}

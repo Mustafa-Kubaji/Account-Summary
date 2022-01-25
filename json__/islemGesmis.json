@@ -1,0 +1,68 @@
+
+{   
+    "islem gecmisi":{
+    
+    "status": true,
+    "model": {
+        "data": [
+            {
+                "id": 349,
+                "title": " \u003Cb\u003E{1312,00 USD}\u003C/b\u003E tutar\u0131nda Odeme i\u015Flemi \u003Cb\u003E{\u015Eirket Kasas\u0131}\u003C/b\u003E kasas\u0131ndan ger\u00E7ekle\u015Ftirildi.",
+                "module": 8,
+                "day": null,
+                "date": "2021-07-05T10:56:50.1645492",
+                "userId": 17,
+                "userName": "hakim@test.com",
+                "modules": []
+            },
+            {
+                "id": 347,
+                "title": " \u003Cb\u003E{14344614,00 TL}\u003C/b\u003E tutar\u0131nda Odeme i\u015Flemi \u003Cb\u003E{\u015Eirket Kasas\u0131}\u003C/b\u003E kasas\u0131ndan ger\u00E7ekle\u015Ftirildi.",
+                "module": 8,
+                "day": null,
+                "date": "2021-07-05T10:55:16.8495379",
+                "userId": 17,
+                "userName": "hakim@test.com",
+                "modules": []
+            },
+            {
+                "id": 345,
+                "title": " \u003Cb\u003E{124124,00 TL}\u003C/b\u003E tutar\u0131nda Tahsilat i\u015Flemi \u003Cb\u003E{\u015Eirket Kasas\u0131}\u003C/b\u003E kasas\u0131ndan ger\u00E7ekle\u015Ftirildi.",
+                "module": 8,
+                "day": null,
+                "date": "2021-07-05T10:49:44.7413115",
+                "userId": 17,
+                "userName": "hakim@test.com",
+                "modules": []
+            },
+            {
+                "id": 343,
+                "title": " \u003Cb\u003E{12312,00 TL}\u003C/b\u003E tutar\u0131nda Tahsilat i\u015Flemi \u003Cb\u003E{\u015Eirket Kasas\u0131}\u003C/b\u003E kasas\u0131ndan ger\u00E7ekle\u015Ftirildi.",
+                "module": 8,
+                "day": null,
+                "date": "2021-07-05T10:49:31.4698708",
+                "userId": 17,
+                "userName": "hakim@test.com",
+                "modules": []
+            },
+            {
+                "id": 341,
+                "title": " \u003Cb\u003E{14212412,00 TL}\u003C/b\u003E tutar\u0131nda Tahsilat i\u015Flemi \u003Cb\u003E{\u015Eirket Kasas\u0131}\u003C/b\u003E kasas\u0131ndan ger\u00E7ekle\u015Ftirildi.",
+                "module": 8,
+                "day": null,
+                "date": "2021-07-05T10:47:34.9565391",
+                "userId": 17,
+                "userName": "hakim@test.com",
+                "modules": []
+            }
+        ],
+        "skip": 0,
+        "take": 5,
+        "pagesize": 5,
+        "total": 7,
+        "modulId": null,
+        "id": null
+    }
+
+}
+}

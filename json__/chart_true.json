@@ -1,0 +1,24 @@
+
+
+{
+    "chartDatat": {
+
+    "status": true,
+    "data": [
+        {
+            "label": "TL Toplam Bor\u00E7",
+            "value": 0,
+            "parabirim": "TL"
+        },
+        {
+            "label": "TL Toplam Alacak",
+            "value": 0,
+            "parabirim": "TL"
+        }
+    ],
+    "list": [],
+    "sum": 0,
+    "paraBirim": "TL"
+
+}
+}

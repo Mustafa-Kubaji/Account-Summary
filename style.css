@@ -1,0 +1,320 @@
+
+.container {
+    width: 40%;
+    height: 40%;
+    margin: auto;
+    position: relative;
+}
+
+#loadingMessage{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+body {
+    color: #2c3e50;
+    background: #ecf0f1;
+    padding: 0 1em 1em;
+}
+  h1 {
+    margin: 0;
+    line-height: 2;
+    text-align: center;
+}
+  h2 {
+    margin: 0 0 0.5em;
+    font-weight: normal;
+}
+
+/*for checkbox inputs*/
+.chckbx {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  .row {
+    display: flex;
+  }
+  .row .col {
+    flex: 1;
+  }
+  .row .col:last-child {
+    margin-left: 1em;
+  }
+  /* Accordion styles */
+  .tabs {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+  }
+  .tab {
+    width: 100%;
+    color: white;
+    overflow: hidden;
+  }
+  .tab-label {
+    font-family: sans-serif, "Gill Sans";
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: #2c3e50;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 0px;
+    /* Icon */
+  }
+  .tab-label:hover {
+    background: #1a252f;
+  }
+  .tab-label::after {
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transition: all 0.35s;
+  }
+  .tab-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: #2c3e50;
+    background: white;
+    transition: all 0.35s;
+  }
+  .tab-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: #2c3e50;
+    cursor: pointer;
+  }
+  .tab-close:hover {
+    background: #1a252f;
+  }
+  input:checked + .tab-label {
+    background: #1a252f;
+  }
+  input:checked + .tab-label::after {
+    transform: rotate(90deg);
+  }
+  input:checked ~ .tab-content {
+    max-height: 1000vh;
+    padding: 1em;
+  }
+  
+
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 10px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  /*border: 2px solid #4CAF50;*/
+  width: 145px;
+  margin-top: 50px;
+  
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button3 {
+  background-color: white; 
+  color: black; 
+  /*border: 2px solid #f44336;*/
+  width: 145px;
+  margin-top: 50px;
+}
+
+.button3:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.button4 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.button4:hover {background-color: #e7e7e7;}
+
+.button5 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}
+
+
+.button6 {
+  background-color: #008CBA; 
+  color: white;
+  border: 2px solid #008CBA;
+}
+
+.button6:hover {
+  background-color: white;
+  color: black;
+}
+
+.collapse{
+  background-color: rgb(255, 236, 196);
+  color: #b91d47;
+  padding: 2em 2em 2em;
+  border: 8px none #ffa600;
+  border-left-style: inset;
+
+  font-family: sans-serif, "Gill Sans";
+  font-size: 16px;
+  margin: 10px 20px ;
+  margin-right: 5%;
+  border-radius: 10px;
+
+  position: relative;
+  animation: mymove ;
+  animation-duration: 0.5s;
+  
+
+}
+
+
+@keyframes mymove {
+from {top: 200px;}
+to {top: 0;}
+}
+
+
+#receipt{
+  background-color: rgb(255, 236, 196);
+  color: #b91d47;
+  padding: 2em 2em 2em;
+  border: 8px none #ffa600;
+  border-left-style: inset;
+
+  font-family: sans-serif, "Gill Sans";
+  font-size: 16px;
+  margin: 0px 20px ;
+  margin-right: 5%;
+  border-radius: 10px;
+
+  position: relative;
+  animation: mymove ;
+  animation-duration: 0.5s;
+
+}
+#receipt2{
+  background-color: rgb(255, 236, 196);
+  color: #b91d47;
+  padding: 2em 2em 2em;
+  border: 8px none #ffa600;
+  border-left-style: inset;
+
+  font-family: sans-serif, "Gill Sans";
+  font-size: 16px;
+  margin: 0px 20px ;
+  margin-right: 5%;
+  border-radius: 10px;
+
+  position: relative;
+  animation: mymove ;
+  animation-duration: 0.5s;
+
+}
+
+#receipt3{
+  background-color: rgb(255, 236, 196);
+  color: #b91d47;
+  padding: 2em 2em 2em;
+  border: 8px none #ffa600;
+  border-left-style: inset;
+
+  font-family: sans-serif, "Gill Sans";
+  font-size: 16px;
+  margin: 0px 20px ;
+  margin-right: 5%;
+  border-radius: 10px;
+
+  position: relative;
+  animation: mymove ;
+  animation-duration: 0.5s;
+
+}
+
+.labels{
+
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 20%;
+  display: inline-block;
+}
+
+#tutar_tur{
+  width: 10%;
+}
+#tutar_tur2{
+  width: 10%;
+}
+#tutar_tur3{
+  width: 10%;
+}
+
+.inputs{
+  width: 40%;
+  height: 30px;
+  border: 4px none #ffa600;
+  border-left-style: inset;
+  border-radius: 4px;
+  margin: auto;
+}
+
+
+.islemler {
+  padding: 10px;
+}
+
+.notlar {
+  padding: 10px;
+}
+
+.devamiGor1{
+  padding: 10px;
+}
+
+#devamiGor{
+  padding: 10px;
+}

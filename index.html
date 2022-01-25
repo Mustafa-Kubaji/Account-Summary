@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <title>Chart.js</title>
+</head>
+
+<body>
+
+
+
+    <div class="container">               
+
+        
+    <h1>Account Summary</h1>
+
+
+
+    <div class="row">
+        <div class="col">
+          <h2></h2>
+          <div class="tabs">
+
+            <div class="tab">
+              <input class="chckbx" type="radio" id="rd1" name="rd">
+              <label class="tab-label" for="rd1">Hesap Özeti</label>
+              <div class="tab-content">
+                
+                <canvas id="myChart"></canvas>
+                <div id="sonuc" style="text-align: center;"></div>
+                <div id="bakiye" style="text-align: center;"></div>
+
+                <div id="loadingMessage"></div>
+                <button class="button button2" style="display: none;">+ Detay</button>
+                <button class="button button6" style="margin-left: 30%; display: none;">Tahsilat Ekle</button>
+                <div class="collapse" style="display: none;"></div>
+
+              </div>
+            </div>
+
+
+
+            <div class="tab">
+              <input class="chckbx" type="radio" id="rd2" name="rd">
+              <label class="tab-label" for="rd2">Açılış Fişi Ekle</label>
+              <div class="tab-content">
+                
+                <form action="/tacos" id="receipt" >
+                    <p>
+                        <label class="labels" for="bakiye">Bakiye Türü </label>
+                        <select class="inputs" id="bakiye" name="bakiyeturu" form="receipt" required>
+                        <option value="Borc_fisi">Borç Fişi</option>
+                        <option value="Alacak_fisi">Alacak Fişi</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label class="labels" for="tarih">İşlem Tarihi </label>
+                        <input class="inputs" type="datetime-local" id="tarih" name="tarih" required>
+                    </p>
+                    <p>
+                    <label class="labels" for="tutar">Tutar </label>
+                    <input class="inputs" id="tutar" type="number" placeholder="0.00"  name="tutar" required maxlength="15" step=".01" >
+                    <select class="inputs" id="tutar_tur" name="tutar_tur" form="receipt" required>
+                        <option value="TL">TL</option>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        </select>
+                    </p>    
+                    <p>
+                        <label class="labels" for="aciklama">Açıklama </label>
+                        <input class="inputs" id="aciklama" type="text" placeholder="Açıklama"  name="aciklama" minlength="3" maxlength="15">
+                    </p>  
+               
+                    <button class="button button1">Kaydet</button>
+                    <button class="button button3" type="button">İptal</button>
+                
+                </form>
+                
+              </div>
+            </div>
+
+
+
+            <div class="tab">
+                <input class="chckbx" type="radio" id="rd3" name="rd">
+                <label class="tab-label" for="rd3">Tahsilat Yap</label>
+                <div class="tab-content">
+                  
+                    <form action="/tacos" id="receipt2"  >
+                        <p>
+                            <label class="labels" for="odeme2">Ödeme Türü </label>
+                            <select class="inputs" id="odeme2" name="bakiyeturu" form="receipt2" required >
+                                <option hidden selected disabled>Ödeme Türü seç</option> 
+                                <option value="Nakit" >Nakit</option>
+                                <option value="EFT" >EFT</option>
+                                <option value="ÇEK">ÇEK</option>
+                            </select>
+                        </p>
+                        <p class="kasa">
+                            <label class="labels" for="kasa2">Kasa </label>
+                            <select class="inputs" id="kasa2" name="bakiyeturu" form="receipt2" required>  
+                                <option hidden selected disabled>Kasa seç</option>                           
+                                <option value="sirket_kasasi">Şirket Kasası</option>
+                            </select>
+                        </p>
+                        <p class="tutar">
+                            <label class="labels" for="tutar2">Tutar </label>
+                            <input class="inputs" id="tutar2" type="number" placeholder="0.00" form="receipt2" name="tutar" required maxlength="15" step=".01" >
+                            <select class="inputs" id="tutar_tur2" name="tutar_tur" form="receipt2" required>
+                                <option value="TL">TL</option>
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                                </select>
+                            </p> 
+                        <p>
+                            <label class="labels" for="tarih2">İşlem Tarihi </label>
+                            <input class="inputs" type="datetime-local" id="tarih2" name="tarih" form="receipt2" required>
+                        </p>
+                        <p class="belge_no">
+                            <label class="labels" for="belge_no2">Belge No </label>
+                            <input class="inputs" id="belge_no2" type="text" placeholder="Belge No" form="receipt2" name="belge_no" minlength="3" maxlength="10">
+                        </p>  
+                        <p class="aciklama">
+                            <label class="labels" for="aciklama2">Açıklama </label>
+                            <input class="inputs" id="aciklama2" type="text" placeholder="Açıklama" form="receipt2" name="aciklama" minlength="5" maxlength="250">
+                        </p>  
+    
+                        <p class="nakit banka">
+                            <label class="labels" for="banka2">Banka </label>
+                            <select class="inputs" id="banka2" name="banka" form="receipt2" required>
+                                <option hidden selected disabled>Banka seç</option> 
+                                <option value="Ziraat">Ziraat</option>
+                                <option value="Vakıf">Vakıf</option>
+                            </select>
+                        </p>
+                        <p class="nakit cekno">
+                            <label class="labels" for="cek_no2">Çek No </label>
+                            <input class="inputs" id="cek_no2" type="text" placeholder="Çek No"  name="cek_no" form="receipt2" minlength="3" maxlength="10" required>
+                        </p>  
+                        
+                        <p class="nakit vade">
+                            <label class="labels" for="vade2">Vade tarihi </label>
+                            <input class="inputs" type="datetime-local" id="vade2" name="vade" form="receipt2" required>
+                        </p>
+               
+                    
+                        <button class="button button1">Kaydet</button>
+                        <button class="button button3" type="button">İptal</button>
+                    
+                    </form>
+  
+                  
+                </div>
+              </div>
+
+
+
+
+              <div class="tab">
+                <input class="chckbx" type="radio" id="rd4" name="rd">
+                <label class="tab-label" for="rd4">Ödeme Yap</label>
+                <div class="tab-content">
+                  
+                  <form action="" id="receipt3" >
+                        <p>
+                            <label class="labels" for="odeme3">Ödeme Türü </label>
+                            <select class="inputs" id="odeme3" name="bakiyeturu" form="receipt3" required >
+                                <option hidden selected disabled>Ödeme Türü seç</option> 
+                                <option value="Nakit" >Nakit</option>
+                                <option value="EFT" >EFT</option>
+                                <option value="ÇEK">ÇEK</option>
+                            </select>
+                        </p>
+                        <p class="kasa1">
+                            <label class="labels" for="kasa3">Kasa </label>
+                            <select class="inputs" id="kasa3" name="bakiyeturu" form="receipt3" required>  
+                                <option hidden selected disabled>Kasa seç</option>                           
+                                <option value="sirket_kasasi">Şirket Kasası</option>
+                            </select>
+                        </p>
+                        <p class="tutar1">
+                            <label class="labels" for="tutar3">Tutar </label>
+                            <input class="inputs" id="tutar3" type="number" placeholder="0.00"  name="tutar" required maxlength="15" step=".01" >
+                            <select class="inputs" id="tutar_tur3" name="tutar_tur" form="receipt3" required>
+                                <option value="TL">TL</option>
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                                </select>
+                            </p> 
+                        <p>
+                            <label class="labels" for="tarih3">İşlem Tarihi </label>
+                            <input class="inputs" type="datetime-local" id="tarih3" name="tarih" required>
+                        </p>
+                        <p class="belge_no1">
+                            <label class="labels" for="belge_no3">Belge No </label>
+                            <input class="inputs" id="belge_no3" type="text" placeholder="Belge No"  name="belge_no" minlength="3" maxlength="10">
+                        </p>  
+                        <p class="aciklama1">
+                            <label class="labels" for="aciklama3">Açıklama </label>
+                            <input class="inputs" id="aciklama3" type="textarea" placeholder="Açıklama"  name="aciklama" minlength="5" maxlength="250">
+                        </p>  
+    
+                        <p class="nakit1 banka1">
+                            <label class="labels" for="banka3">Banka </label>
+                            <select class="inputs" id="banka3" name="banka" form="receipt3" required>
+                                <option hidden selected disabled>Banka seç</option> 
+                                <option value="Ziraat">Ziraat</option>
+                                <option value="Vakıf">Vakıf</option>
+                            </select>
+                        </p>
+                        <p class="nakit1 cekno1">
+                            <label class="labels" for="cek_no3">Çek No </label>
+                            <input class="inputs" id="cek_no3" type="text" placeholder="Çek No"  name="cek_no" minlength="3" maxlength="10" required>
+                        </p>  
+                        
+                        <p class="nakit1 vade1">
+                            <label class="labels" for="vade3">Vade tarihi </label>
+                            <input class="inputs" type="datetime-local" id="vade3" name="vade" required>
+                        </p>
+               
+                    
+                        <button class="button button1">Kaydet</button>
+                        <button class="button button3" type="button">İptal</button>
+                    
+                    </form>
+  
+                  
+                </div>
+              </div>
+
+
+
+              <div class="tab">
+                <input class="chckbx" type="radio" id="rd5" name="rd">
+                <label class="tab-label" for="rd5">İşlem geçmişi</label>
+                <div class="tab-content">
+                  
+                <div class="islemler">
+                    <!--
+                        <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h3 class="panel-title">Panel title</h3>
+                        </div>
+                        <div class="panel-body">
+                          Panel content
+                        </div>
+                      </div>
+                    -->
+                    
+                </div>
+                <div class="devamiGor1">
+                    <button type="button" class="btn btn-primary" id="devamiGor" style=" display: none;" >Devamini gör</button>
+                </div>
+  
+                  
+                </div>
+              </div>
+
+
+              
+              <div class="tab">
+                <input class="chckbx" type="radio" id="rd6" name="rd">
+                <label class="tab-label" for="rd6">Notlar</label>
+                <div class="tab-content">
+                  
+                    <div class="notlar">
+                        <!--
+                            <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">Panel title</h3>
+                            </div>
+                            <div class="panel-body">
+                              Panel content
+                            </div>
+                          </div>
+                        -->
+                    </div>
+
+
+                </div>
+              </div>
+
+
+            <div class="tab">
+              <input class="chckbx" type="radio" id="rd7" name="rd">
+              <label for="rd7" class="tab-close">Close others &times;</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+</div>
+
+  
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="./doughnut.js"></script>
+
+</body>
+
+
+
+</html>
